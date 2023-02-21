@@ -1,54 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="halloween">
 <head>
-  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="author" content="ray" />
+  <meta name="description" content="Just a dev" />
+  <meta name="keywords" content="python, django, rust, javascript, science, tech, homelab, software, bitcoin" />
   <title>Hey</title>
-  <style>
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: #1d1e22;
-      color: #bbb;
-      font-family: monospace;
-    }
-    a {
-      background-color: #ff7e00;
-      color: white;
-      padding: 15px;
-      width: 200px;
-      border-radius: 5px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      -webkit-transition: background-color 0.2s ease-out;
-      -moz-transition: background-color 0.2s ease-out;
-      -o-transition: background-color 0.2s ease-out;
-      transition: background-color 0.2s ease-out;
-    }
-    a:hover{
-      background-color: #ccc;
-    }
-    li{
-      list-style-type: none;
-      text-align: center;
-      margin: 10px 0;
-    }
-    html, body { margin: 0; }
-  </style>
 </head>
 
-<body>
-  <div>
-    <h1>I'm Ray. What's up?</h1>
-    <p>Say hello</p>
-    <ul>
-      <li><a href="https://github.com/rayonx">Github</a></li>
-      <li><a href="https://twitter.com/raydotcomputer">Twitter</a></li>
-    </ul>
-  </div>
+<body class="leading-normal tracking-normal px-4 flex h-screen">
+
+    <div class="card max-w-lg bg-base-100 shadow-xl mx-auto my-auto">
+      <div class="card-body">
+        <div class="mockup-code">
+          <pre data-prefix="$"><code>./intro.sh</code></pre> 
+          <pre data-prefix=">" class="text-warning"><code>Loading ...</code></pre> 
+          <pre data-prefix=">" class="text-success"><code>OK!</code></pre>
+        </div>
+        <h2 class="card-title mt-4">
+          Thanks for dropping by!
+        </h2>
+        <p class="font-mono">
+          I'm Ray and I have been in the web dev industry professionally for almost 9 years now.
+          I gotta say that my drive comes from my greed for more knowledge. As the ol' adage goes, you learn until you die. 
+          <br><br>
+          Life is too short to be filled with regrets, so go on to your next adventure. Don't wait. That'd be my motto.
+          <br><br>
+          I believe in freedom, karmic retribution and paying it forward.
+        </p>
+        <div class="card-actions justify-end pt-8">
+          <div class="badge badge-outline badge-info">English</div>
+          <div class="badge badge-outline badge-info">Bahasa</div>
+          <div class="badge badge-outline badge-info">中文</div>
+          <div class="badge badge-outline badge-info">台語</div>
+          <div class="badge badge-outline badge-info">日本語</div>
+        </div>
+        <div class="card-actions justify-end pb-8">
+          <div class="badge badge-outline">web dev</div>
+          <div class="badge badge-outline">homelab</div> 
+          <div class="badge badge-outline">machine learning</div>
+          <div class="badge badge-outline badge-warning">bitcoin</div>
+        </div>
+
+        <div class="card-actions justify-end">
+          <button class="btn btn-default btn-outline w-full" onclick="window.open('https://github.com/rayonx');">Github</button>
+          <button class="btn btn-info btn-outline w-full" onclick="window.open('https://twitter.com/raydotcomputer');">Twitter</button>
+          <button class="btn btn-primary btn-outline w-full" onclick="window.location = './nostr-pG0M55C1pFKFDGhqNOFG2c6l.html'">nostr trollbox 🙂</button>
+        </div>
+      </div>
+    </div>
+
 </body>
 
 </html>

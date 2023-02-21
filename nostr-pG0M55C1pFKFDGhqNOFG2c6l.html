@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html data-theme="halloween">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="author" content="ray" />
+  <meta name="description" content="Just a dev" />
+  <meta name="keywords" content="python, django, rust, javascript, science, tech, homelab, software, bitcoin" />
+  <title>Hey</title>
+</head>
+
+<body class="leading-normal tracking-normal px-4 flex h-screen">
+
+    <div class="mx-auto my-auto">
+
+        <div class="w-24 my-auto text-center">
+            <button class="btn btn-circle btn-outline" onclick="window.location='./.'">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>                  
+            </button>
+        </div>
+
+        <div class="card bg-base-100 shadow-xl mx-auto my-auto">
+
+            <div class="card-body">
+                <h1 class="card-title">decentralised guestbook / trollbox</h1>
+                <!-- copier -->
+                <script src="https://kit.fontawesome.com/d97b87339f.js" crossorigin="anonymous"></script>
+                <style>
+                    .copy-input {
+                    max-width: 275px;
+                    width: 100%;
+                    cursor: pointer;
+                    background-color: #eaeaeb;
+                    border:none;
+                    color:#6c6c6c;
+                    font-size: 14px;
+                    border-radius: 5px;
+                    padding: 15px 45px 15px 15px;
+                    font-family: 'Montserrat', sans-serif;
+                    }
+                    .copy-input:focus {
+                    outline:none;
+                    }
+
+                    .copy-btn {
+                    width:40px;
+                    background-color: #eaeaeb;
+                    font-size: 18px;
+                    padding: 6px 9px;
+                    border-radius: 5px;
+                    border:none;
+                    color:#6c6c6c;
+                    margin-left:-50px;
+                    transition: all .4s;
+                    }
+                    .copy-btn:hover {
+                    transform: scale(1.3);
+                    color:#1a1a1a;
+                    cursor:pointer;
+                    }
+
+                    .copy-btn:focus {
+                    outline:none;
+                    }
+
+                    .copied {
+                    font-family: 'Montserrat', sans-serif;
+                    width: 100px;
+                    opacity:0;
+                    position:fixed;
+                        bottom: 20px;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                    color:#000;
+                    padding: 15px 15px;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    transition: .4s opacity;
+                    }
+                </style>
+                <script>
+                    function copy() {
+                    let copyText = document.getElementById("copyClipboard");
+                    let copySuccess = document.getElementById("copied-success");
+                    copyText.select();
+                    copyText.setSelectionRange(0, 99999); 
+                    navigator.clipboard.writeText(copyText.value);
+                    
+                    copySuccess.style.opacity = "1";
+                    setTimeout(function(){ copySuccess.style.opacity = "0" }, 800);
+                    }
+                </script>
+                <div class="clipboard">
+                    <p class="text-sm">follow me on nostr (my pubkey)</p>    
+                    <input onclick="copy()" class="copy-input" value="npub1y8g62zszgtyxxnw85w23qs6tcrgpmd7xppct4p3pj6qe52sspp7qnp9kd6" id="copyClipboard" readonly>
+                    <button class="copy-btn" id="copyButton" onclick="copy()"><i class="far fa-copy"></i></button>
+                </div>
+                <div id="copied-success" class="copied">
+                    <span>Copied ✓</span>
+                </div>
+                <!-- copier -->
+                <p class="font-bold my-4">OR</p>
+                <p>leave me a message here 👇</p>
+                <script
+                src="https://nocomment.netlify.app/embed.js"
+                id="nocomment"
+                data-owner='21d1a50a0242c8634dc7a39510434bc0d01db7c60870ba862196819a2a10087c'
+                data-relays='[
+                "wss://nostr.drss.io",
+                "wss://nostr-relay.freeberty.net",
+                "wss://relay.stoner.com",
+                "wss://nostr-relay.untethr.me",
+                "wss://relay.damus.io"
+                ]'
+                ></script>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
